@@ -10,7 +10,7 @@ def index():
 @app.route('/convert', methods=['POST'])
 def convert():
     youtube_url = request.form['youtube_url']
-    output_path = './output_folder'
+    output_path = "./output_folder"  # Output folder where MP3 will be saved
     download_youtube_audio(youtube_url, output_path)
     return redirect(url_for('download'))
 
